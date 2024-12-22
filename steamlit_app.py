@@ -2,7 +2,7 @@ import streamlit as st
 from snowflake.snowpark.functions import col
 import requests
 
-sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=true )
+sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
 if ingredient_list:
     ingredient_string = ''
