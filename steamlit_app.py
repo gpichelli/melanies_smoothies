@@ -1,4 +1,4 @@
-import streamlit as st
+simport streamlit as st
 from snowflake.snowpark.functions import col
 import requests
 # smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
@@ -28,7 +28,7 @@ ingredients_list = st.multiselect(
 if ingredients_list:
     ingredients_string = ''
 
-    for fruit_chosen in ingredient_list:
+    for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
         st.text(smoothiefroot_response.json) 
