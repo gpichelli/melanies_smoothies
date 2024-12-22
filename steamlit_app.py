@@ -1,11 +1,16 @@
-# Import python packages
 import streamlit as st
-# from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response.json)
 
+sf.df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=true )
+
+if ingredient_list:
+    ingredient_string = ''
+    foreach fruit_chosen in ingredient_list:
+        ingredient_string += fruit_chosen + ' '
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        st.text(smoothiefroot_response.json) 
+        
 # Write directly to the app
 st.title(":cup_with_straw: Customize Your Smoothie!  :cup_with_straw:")
 st.write(
